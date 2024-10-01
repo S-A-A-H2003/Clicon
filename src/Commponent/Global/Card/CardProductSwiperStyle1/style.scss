@@ -1,0 +1,35 @@
+.MyCardProductSwiperStyle1 {
+  width: 872px;
+  height: 520px;
+}
+.swiper-slide {
+  background: #F2F4F5;
+  display: flex;
+  align-items: center;
+  padding: 56px;
+  margin-bottom: 24px;
+}
+.SwiperSlide_Left_One{
+  margin-bottom: 8px;
+}
+.SwiperSlide_Left_Tow{
+  margin-bottom: 16px;
+}
+.SwiperSlide_Left_Three{
+  margin-bottom: 20px;
+}
+.SwiperSlide_Right_Img{
+  margin-left: 36px;
+  width: 368px;
+  height: 408px;
+}
+.SwiperSlide_Right{
+  position: relative;
+}
+.SwiperSlide_Right_Display{
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}

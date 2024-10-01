@@ -1,0 +1,49 @@
+.ResultSearch {
+   position: relative;
+   margin-top: 30px;
+   background-color: #f9f9f9; 
+   border-radius: 8px; 
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.ResultSearch_Card{
+   padding-top: 40px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row-reverse;
+   justify-content: center;
+   row-gap: 25px;
+   column-gap: 25px;
+}
+.ResultSearch_img_Clear{
+   position: absolute;
+   top: 5px;
+   left: 550px;
+   cursor: pointer; 
+}
+.ResultSearch_img_Clear:hover{
+   transition: 0.5s linear;
+   transform: scale(1.2);
+
+}
+.ResultSearch_Home{
+   display: flex;
+   justify-content: center;
+}
+
+@media screen and (max-width:677px){
+   .ResultSearch {
+      padding-top: 350px;
+      
+   }
+}
+@media screen and (max-width:490px){
+   .ResultSearch {
+      padding-top: 450px;
+      
+   }
+   .ResultSearch_img_Clear{
+      position: fixed;
+      right: 5px;
+   }
+}
+

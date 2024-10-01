@@ -1,0 +1,11 @@
+.CardStyleCategory{
+    display: grid;
+    place-items: center;
+    padding: 24px 12px 24px 12px ;
+    
+    .CardStyleCategory_Img{
+        width: 148px;
+        height: 148px; 
+        margin-bottom: 16px;
+    }
+}

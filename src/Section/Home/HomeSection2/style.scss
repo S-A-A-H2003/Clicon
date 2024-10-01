@@ -1,0 +1,13 @@
+.HomeSection2_Parent{
+    display: grid;
+    place-items: center;
+}
+.HomeSection2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.HomeSection2 .Break{
+    height: 56px;
+    border: 1px solid #E4E7E9;
+}

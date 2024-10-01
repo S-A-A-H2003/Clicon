@@ -1,0 +1,23 @@
+.WidgetS1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.WidgetS1_Right{
+    position: relative;
+}
+.WidgetS1_Left_brand{
+    margin-bottom: 5px;
+}
+.WidgetS1_Left_ProductNames{
+    margin-bottom: 18px;
+}
+.WidgetS1_Right_Discount{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.WidgetS1_Right_Img{
+    width: 160px;
+    height: 160px;
+}

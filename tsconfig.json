@@ -1,5 +1,27 @@
+// {
+//   "files": ["src],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ]
+// }
+
 {
-  "files": [],
+  "compilerOptions": {
+    "target": "es6", // أو أي إصدار مناسب من JavaScript
+    "module": "commonjs", // يمكنك تعديله حسب احتياجاتك
+    "strict": true, // تفعيل وضع التحقق الصارم من الأخطاء
+    "forceConsistentCasingInFileNames": true, // تجنب مشاكل حالة الأحرف
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "jsx": "react", // استخدام "react-jsx" إذا كنت تستخدم React 17 أو أحدث
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "./dist" // مسار إخراج الملفات المجمعة
+  },
+  "include": ["src"], // تأكد من أن هذا المسار موجود
+  "exclude": ["node_modules", "dist"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

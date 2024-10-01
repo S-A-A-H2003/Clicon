@@ -1,0 +1,26 @@
+.Subscribe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12);
+}
+.Subscribe_Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Subscribe_Form_Input_1{
+   width:424px ;
+   height:48px ;
+   margin-right: 16px;
+   border: none;
+   padding-left: 28px;
+}
+.Subscribe_Form_Input_1:hover{
+    border: 1px solid #FA8232;
+}
+.Subscribe_Form_Button:hover{
+    transition: 1s linear;
+    transform: scale(1.1);
+    border-radius: 8px;
+}

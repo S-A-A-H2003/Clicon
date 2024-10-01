@@ -1,0 +1,20 @@
+.HomeSection4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.HomeSection4_Top{
+    margin-bottom: 40px;
+}
+.HomeSection4_Bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1150px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.HomeSection4_Bottom div{
+   margin-left: 18px;
+}

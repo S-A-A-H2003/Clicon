@@ -1,0 +1,38 @@
+.CardProductStyle3{
+    padding: 24px;
+}
+.CardProductStyle3_Img{
+    width: 280px;
+    height: 268px;
+    margin-bottom: 24px;
+}
+.CardProductStyle3_Rating{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.CardProductStyle3_Rating p{
+    margin-left:3px;
+
+}
+.CardProductStyle3_productNames{
+    margin-bottom: 12px;
+}
+.CardProductStyle3_Price{
+   display: flex;
+   margin: 8px 8px 12px 0px;
+}
+.CardProductStyle3_Price p{
+    margin-right: 4px;
+}
+.CardProductStyle3_description{
+    margin-bottom: 24px;
+}
+.CardProductStyle3_Component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CardProductStyle3_Component button{
+    margin: 0px 8px 0px 8px;
+}

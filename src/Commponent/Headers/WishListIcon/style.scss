@@ -1,0 +1,27 @@
+.WishListIcon{
+    position: relative;
+}
+.WishListIcon:hover{
+    transition: 0.5s linear;
+    transform: scale(1.2);
+}
+.WishListIcon .Conter{
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.WishListIcon .ContinerCountNumber{
+    position: absolute;
+}
+.WishListIcon .Number{
+    z-index: 99;
+    color: #1B6392;
+    font-size: 10px;
+}
+
+
+

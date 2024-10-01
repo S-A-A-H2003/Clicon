@@ -1,0 +1,75 @@
+export const Color={
+    
+        /*Gary*/
+    Gary00:'#FFFFFF',
+    Gary50:'#F2F4F5',
+    Gary100:'#E4E7E9',
+    Gary200:'#C9CFD2',
+    Gary300:'#ADB7BC',
+    Gary400:'#929FA5',
+    Gary500:'#77878F',
+    Gary600:'#5F6C72',
+    Gary700:'#475156',
+    Gary800:'#303639',
+    Gary900:'#191C1F',
+
+        /*Primary*/
+    Primary50:'#FFF3EB',
+    Primary100:'#FFE7D6',
+    Primary200:'#FFCEAD',
+    Primary300:'#FFB685',
+    Primary400:'#FF9D5C',
+    Primary500:'#FA8232',
+    Primary600:'#DE732D',
+    Primary700:'#99501F',
+    Primary800:'#663514',
+    Primary900:'#331B0A',
+
+        /*Secondary*/
+    Secondary50:'#EAF6FE',
+    Secondary100:'#D5EDFD',
+    Secondary200:'#ABDBFA',
+    Secondary300:'#81C9F8',
+    Secondary400:'#57B7F5',
+    Secondary500:'#2DA5F3',
+    Secondary600:'#2484C2',
+    Secondary700:'#1B6392',
+    Secondary800:'#124261',
+    Secondary900:'#092131',
+
+        /*Success*/
+    Success50:'#EAF7E9',
+    Success100:'#D5F0D3',
+    Success200:'#ABE0A7',
+    Success300:'#81D17C',
+    Success400:'#57C150',
+    Success500:'#2DB224',
+    Success600:'#248E1D',
+    Success700:'#1B6B16',
+    Success800:'#12470E',
+    Success900:'#092407',
+
+        /*Warning*/
+    Warning50:'#FDFAE7',
+    Warning100:'#FBF4CE',
+    Warning200:'#F7E99E',
+    Warning300:'#F3DE6D',
+    Warning400:'#EFD33D',
+    Warning500:'#EBC80C',
+    Warning600:'#BCA00A',
+    Warning700:'#8D7807',
+    Warning800:'#5E5005',
+    Warning900:'#2F2802',
+
+        /*Danger*/
+    Danger50:'#FDEEEE',
+    Danger100:'#FCDEDE',
+    Danger200:'#F8BCBC',
+    Danger300:'#F59B9B',
+    Danger400:'#F17979',
+    Danger500:'#EE5858',
+    Danger600:'#BE4646',
+    Danger700:'#8F3535',
+    Danger800:'#5F2323',
+    Danger900:'#301212',
+}

@@ -1,0 +1,18 @@
+.SocialMediaIcon{
+    display: flex;
+   
+}
+.SocialMediaIcon a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor:alias;
+}
+.SocialMediaIcon a img{
+   margin-left: 12px;
+}
+.SocialMediaIcon a :hover{
+    transition: 0.5s;
+    transform: scale(1.3);
+
+ }

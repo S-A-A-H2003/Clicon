@@ -1,0 +1,33 @@
+.Search{
+    position: relative;
+ }
+.Search_Input{
+   width: 446px;
+   height: 48px;
+   padding-left: 20px;
+   padding-right: 20px;
+
+}
+.Search_Submit{
+   border: none;
+   background-color: #FFFFFF;
+   /* it's in Style as Global */
+    /* position: absolute;
+    top: 13px;
+    left: 13px; */
+}
+ .Search_Submit:hover{
+    transition: 0.5s linear;
+    transform: scale(1.2);
+ }
+
+ @media screen and (max-width:810px){
+    .Search_Input{
+        transition: 0.5s;
+        width: 300px;
+        padding-left: 10px;
+     }
+ }
+
+
+

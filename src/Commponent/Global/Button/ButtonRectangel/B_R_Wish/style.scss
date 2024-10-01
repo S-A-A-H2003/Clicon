@@ -1,0 +1,14 @@
+.BRWish{
+    display: grid;
+    place-items: center;
+
+    &:hover{
+        transition: 0.5s ease;
+        transform: scale(1.1);
+    }
+
+    img{
+        width: 24px;
+        height: 24px;
+    }
+}

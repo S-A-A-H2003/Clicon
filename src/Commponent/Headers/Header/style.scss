@@ -1,0 +1,199 @@
+.Header{
+    z-index: 999;
+}
+.Header .Part_One{
+    min-height: 52px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ffffff16;
+}
+.Header .Part_One_Right_Side{
+    margin-right: 10px;
+}
+.Header .Part_One_Left_Side{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Header .breack{
+    width: 1px;
+    background-color: #ffffff16;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.Header .Part_One_Left_Side_Part_1_1{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Header .Part_One_Left_Side_Part_2_3 {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.Header .Part_One_Left_Side_Part_1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Header .Part_Tow{
+    min-height: 88px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Header .Part_Tow_Logo{
+    margin-right: 20px;
+}
+.Header .Part_Tow_Search{
+    margin-right: 20px;
+}
+.Header .Part_Tow_Data{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.Header .Part_Tow_Data >div{
+    margin-right: 24px;
+}
+.Header .Part_Three{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #F2F4F5;
+}
+.Header .Part_Three_List_Category{
+    margin-right: 24px;
+    margin-top: 8px;
+}
+.Header .Part_Three_List{
+    display: flex;
+}
+.Header .Part_Three_List a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 24px;
+}
+.Header .Part_Three_List img{
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.Header .Part_Three_Phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Header .Part_Three_Phone{
+    margin-left: 10px;
+}
+.Header .Part_Three_Phone img{
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.Header img.List{
+    width: 45px;
+    height: 45px;
+    display: none;
+}
+.Header img.CanselIcon{
+    display: none;
+}
+.Header img.CanselIcon:hover{
+    transition: 0.5s linear;
+    transform: scale(1.3);
+}
+.active p{
+    color:#FA8232;
+    border-bottom: 2px solid;
+}
+.Scrolled .Part_Three{
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+}
+
+
+@media screen and (max-width:680px) {
+    .Header{
+        position: sticky;
+    }
+    .Header .Part_One_Right_Side{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .Header .Part_One_Left_Side{
+        margin-bottom: 15px;
+    }
+    .Part_Tow_Logo{
+        margin-top: 15px;
+        margin-bottom: 15px;   
+    }
+    .Part_Tow_Data{
+        margin-top: 15px;
+        margin-bottom: 15px;  
+    }
+    .Part_Tow_Search{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+}
+@media screen and (max-width:409px) {
+    .Header .Part_One{
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .Header .Part_One_Left_Side_Part_2{
+        margin-top: 10px;
+    }
+    
+    
+}
+@media screen and (max-width:900px) {
+    .Header .Part_Three_List{
+        display: none;
+    }
+    .Header img.List{
+        display: block;
+        margin-left: 30px;
+        margin-right: 20px;
+     }
+     .Header img.CanselIcon{
+        display: block;
+        margin-right: 70px;
+    }
+     .Header .Part_Three{
+        justify-content: space-between;
+    }
+    .Header .Part_Three_Phone{
+        margin-right: 30px;
+    }
+    .Header .Part_Three_List_Responsiv{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        justify-content: center;
+        position: absolute;
+        top:60px;
+        padding-left: 30px;
+        background-color: #f9f9f9; 
+        border-radius: 8px; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .Header .Part_Three_List_Responsiv a{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 30px;
+    }
+    
+    
+}
