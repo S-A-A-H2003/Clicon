@@ -7,7 +7,7 @@ interface Props {
 }
 
 const CountWishlistProvider =({ children }: Props)=>{
-    const [countWishlist,setCountWishlist]=useState(0)
+    const [countWishlist,setCountWishlist]=useState<number>(0)
     return<CountWishlistContext.Provider  value={{countWishlist,setCountWishlist}}>
        {children}
     </CountWishlistContext.Provider>

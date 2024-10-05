@@ -1,0 +1,36 @@
+.HomeSection5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 72px;
+    margin-bottom: 24px;
+
+    .HomeSection5_Right{
+        .HomeSection5_Right_Top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+
+            .HomeSection5_Right_Top_Continer{
+                display: flex;
+                flex-direction:row-reverse;
+                justify-content: center;
+                align-items: center;
+                width: 380px;
+                overflow-y: scroll;
+                scrollbar-width: none;
+              
+            }
+        }
+    
+        .HomeSection5_Right_Bottom{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            row-gap: 16px;
+            column-gap: 16px;
+        }
+    }
+}

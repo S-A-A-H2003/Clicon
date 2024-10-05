@@ -1,0 +1,93 @@
+@mixin Center($Space){ 
+    display: flex;
+    justify-content:#{$Space};
+    align-items: center;
+}
+
+
+.SopeSection1{
+  @include Center(space-evenly);
+
+    .SopeSection1_Aside{
+        .SopeSection1_Aside_Part1_Category{
+            display: flex;
+            align-items: center;
+            margin: {
+                bottom: 5px;
+            }
+            
+            div{
+                margin: {
+                    left: 4px;
+                    right: 4px;
+                }
+            }
+        }
+    }
+    
+    .SopeSection1_Content_Part2{
+        background-color: #F2F4F5;
+        height: 44px;
+        margin: {
+            top: 16px;
+            bottom: 24px;
+        }
+        @include Center(space-between);
+
+        .SopeSection1_Aside_Part2_Left{
+            margin: {
+                right: 24px;
+                left: 24px;
+            }
+            @include Center(space-evenly);
+
+            .SopeSection1_Aside_Part1_Left_ActiveFilterd{
+                @include Center(center);
+                margin: {
+                    right: 16px;
+                    left: 16px;
+                }
+
+                p img{
+                    margin: {
+                        right: 5px;
+                        left: 5px;
+                        bottom: -2px;
+                    }
+                }
+            }
+        }
+        
+        .SopeSection1_Aside_Part2_Right{
+            margin: {
+                right: 24px;
+                left: 24px;
+            }
+            @include Center(space-evenly);
+
+            p{
+                margin: {
+                    right: 3px;
+                    left: 3px;
+                }
+            }
+        }
+    }
+
+    .SopeSection1_Content_Part3{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 16px;
+    }
+    .SopeSection1_Content_Part4{
+        @include Center(center);
+
+        .SopeSection1_Content_Part4_Button{
+            @include Center(center);
+    
+            p{
+                text-align: center;
+            }
+        }
+    }
+}

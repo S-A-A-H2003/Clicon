@@ -36,9 +36,9 @@ interface Props {
 export default function CardCart({item}:Props) {
   //Local
   const {RemoveFromCart} = useCart()
-  const [quantity, setQuantity] = useState(0);
-  const [subTotalLocal, setSubTotalLocal] = useState(0);
-  const [isHover, setIsHover] = useState(false);
+  const [quantity, setQuantity] = useState<number>(0);
+  const [subTotalLocal, setSubTotalLocal] = useState<number>(0);
+  const [isHover, setIsHover] = useState<boolean>(false);
   
   //Global
   const {subTotal,setSubTotal,setTotal,discount,setDiscount,shipping,setShipping,tax,setTax,couponCode} = useCardTotals()

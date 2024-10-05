@@ -9,7 +9,7 @@ import Display from '../../Display'
 
 interface Props {
    item:{
-    pictures: string;
+    Picture:string;
     name: string;
    } 
 }
@@ -25,7 +25,7 @@ export default function CardCategory({item}:Props) {
           border={`1px solid ${Color.Gary100}`} 
         >
          
-          <img src={item.pictures} alt="" className='CardStyleCategory_Img' />
+          <img src={item.Picture} alt="" className='CardStyleCategory_Img' />
           <BodyMedium500 color={Color.Gary900}>
             {item.name}
           </BodyMedium500>

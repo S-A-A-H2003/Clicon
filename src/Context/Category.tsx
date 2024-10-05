@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { createContext } from "react";
 import { useGet } from "../Hook/Api/Get";
+import { useTranslation } from "react-i18next";
 
 export const CategoryContext  = createContext<any>(null)
 
@@ -9,8 +10,9 @@ interface Props {
 }
 
 const CategoryProvider =({ children }: Props)=>{
-    const {data:Category}=useGet(import.meta.env.VITE_API_GET_CATEGORY)
-
+    const {i18n}=useTranslation()
+    const Api = i18n.language==='ar'?import.meta.env.VITE_API_GET_CATEGORY_AR:import.meta.env.VITE_API_GET_CATEGORY
+    const {data:Category}=useGet(Api)
     return <CategoryContext.Provider value={{Category}}>
         {children}
     </CategoryContext.Provider>

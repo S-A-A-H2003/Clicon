@@ -1,19 +1,8 @@
 
 import img1 from './ImgProduct/Image.png'
-import img2 from './ImgProduct/Image.png'
-import img3 from './ImgProduct/Image.png'
-import img4 from './ImgProduct/Image.png'
-import img5 from './ImgProduct/Image.png'
-import img6 from './ImgProduct/Image.png'
-import img7 from './ImgProduct/Image.png'
-import img8 from './ImgProduct/Image.png'
-import img9 from './ImgProduct/Image.png'
-import img10 from './ImgProduct/Image.png'
-import img11 from './ImgProduct/Image.png'
-import img12 from './ImgProduct/Image.png'
-import img13 from './ImgProduct/Image.png'
-import img14 from './ImgProduct/Image.png'
-import img15 from './ImgProduct/Image.png'
+import img2 from './ImgProduct/Image (1).png'
+import img3 from './ImgProduct/Image1.jpg'
+
 
 export const Products:Products[] = [];
 
@@ -85,7 +74,7 @@ const productNames = [
   "Dell",
   "Apple",
   "Sony",
-  "iPad Pro",
+  "iPad",
   "Samsun",
   "Lenovo",
   "Microsoft",
@@ -106,18 +95,6 @@ const productImages = [
   img1,
   img2,
   img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-  img13,
-  img14,
-  img15,
 
 ];
 const items = [

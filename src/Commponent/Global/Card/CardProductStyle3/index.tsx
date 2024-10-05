@@ -26,6 +26,7 @@ import { useNavigate } from 'react-router-dom'
 //Context
 import { useCartContext } from '../../../../Context/Cart'
 import { useWishlistContext } from '../../../../Context/Wishlist'
+import { convertCurrency } from '../../../../Utils/Currency'
 
 
 export default function CardProductStyle3({item}:any) {
@@ -41,13 +42,37 @@ export default function CardProductStyle3({item}:any) {
 
   const HandelChangeBRAddToCart =(item:any)=>{
     setInitBRAddToCart(initBRAddToCart?false:true)
-    initBRAddToCart?RemoveFromCart(item.id):AddToCart(item.id) 
+    if(initBRAddToCart){
+      if(item.isSoldOut){
+        window.alert(item.productNames +" Sold Out")
+      }else{
+        RemoveFromCart(item.id)
+      }
+    }else{
+      if(item.isSoldOut){
+        window.alert(item.productNames +" Sold Out")
+      }else{
+        AddToCart(item.id)
+      }
+    }
   }
   const HandelChangeBRWish =(item:any)=>{
     setInitBRWish(initBRWish?false:true)
-    initBRWish?RemoveFromWishlist(item.id):AddToWishlist(item.id) 
-
+    if(initBRWish){
+          if(item.isSoldOut){
+            window.alert(item.productNames +" Sold Out")
+          }else{
+            RemoveFromWishlist(item.id)
+          }
+        }else{
+          if(item.isSoldOut){
+            window.alert(item.productNames +" Sold Out")
+          }else{
+            AddToWishlist(item.id)
+          }
+        }
   } 
+  const Type:string =localStorage.getItem('Currency') || "USD"
   return (
     <>  
         <Display 
@@ -58,17 +83,17 @@ export default function CardProductStyle3({item}:any) {
         >
           
           <div className="CardProductStyle3_Badge">
-            {item.isSoldOut?<SoldOut className={'CardProductStyle3_SoldOut'}></SoldOut>:
+            {item.isSoldOut?<SoldOut className={'CardStyle3_Activ CardProductStyle3_SoldOut'}></SoldOut>:
               <>
-                {item.offer?<Discount className={'CardProductStyle3_Discount'} Discount={item.offer}></Discount>:''}
-                {item.isHot?<Hot className={'CardProductStyle3_Hot'}></Hot>:''}
-                {item.isSale?<Sale className={'CardProductStyle3_Sale'}></Sale>:''}
+                {item.offer?<Discount className={'CardStyle3_Activ CardProductStyle3_Discount'} Discount={item.offer}></Discount>:''}
+                {item.isHot?<Hot className={'CardStyle3_Activ CardProductStyle3_Hot'}></Hot>:''}
+                {item.isSale?<Sale className={'CardStyle3_Activ CardProductStyle3_Sale'}></Sale>:''}
               </>
             }
           </div>
           <img src={item.pictures.mainPicture} alt="" className='CardProductStyle3_Img' />
           <div className="CardProductStyle3_Rating">
-            <Rating Rate={item.Rating.rate}></Rating>
+            <Rating Rate={item.Rating.rate} Style={false}></Rating>
             <BodySmall400 color={Color.Gary500}>
               ({item.Rating.userFeedBack})
             </BodySmall400>
@@ -81,11 +106,11 @@ export default function CardProductStyle3({item}:any) {
           <div className="CardProductStyle3_Price">
             <BodySmall600 color={Color.Gary400}>
               <del>
-                ${item.priceBefor}
+                {localStorage.getItem('Currency')}  {convertCurrency(item.priceBefor,Type)}
               </del>
             </BodySmall600>
             <BodySmall600 color={Color.Secondary500}>
-              ${item.price}
+              {localStorage.getItem('Currency')}  {convertCurrency(item.price,Type)}
             </BodySmall600>
           </div>
           <div className="CardProductStyle3_description">

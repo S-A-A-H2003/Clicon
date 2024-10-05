@@ -6,7 +6,7 @@ interface Props {
 }
 
 const ResultProvider =({ children }: Props)=>{
-    const [resultSearch, setResultSearch] = useState([]);
+    const [resultSearch, setResultSearch] = useState<[]>();
     return <ResultContext.Provider value={{resultSearch, setResultSearch}}>
         {children}
     </ResultContext.Provider>

@@ -15,9 +15,10 @@ interface Props {
   children?: React.ReactNode;
   onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
   onMouseLeave?: React.MouseEventHandler<HTMLDivElement>;
+  onClick?:()=>void;
 }
 
-export default function Display({className,width,height,color,backgroundcolor,border,borderradius,children,onMouseEnter,onMouseLeave}:Props) {
+export default function Display({className,width,height,color,backgroundcolor,border,borderradius,children,onMouseEnter,onMouseLeave,onClick}:Props) {
   return (
     <>
       <DisplayStyle
@@ -30,6 +31,7 @@ export default function Display({className,width,height,color,backgroundcolor,bo
        borderradius={borderradius}
        onMouseEnter={onMouseEnter}
        onMouseLeave={onMouseLeave}
+       onClick={onClick}
       >
       {children}
       </DisplayStyle>

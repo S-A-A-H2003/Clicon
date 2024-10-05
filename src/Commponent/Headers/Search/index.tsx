@@ -14,11 +14,11 @@ export default function Search() {
   const {Products} = useProductsContext()
   const {t}=useTranslation()
   const {setResultSearch}=useResultContext()
-  const HandelSubmit=(e)=>{
+  const HandelSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
   }
   
-  const HandelChandeInput=(e)=>{
+  const HandelChandeInput=(e:React.ChangeEvent<HTMLInputElement>)=>{
     const Result = Products?.filter((item:any)=>item.productNames.toLowerCase().includes(e.target.value.toLowerCase().trim()))
     if (Result.length>0) {
       setResultSearch(Result)

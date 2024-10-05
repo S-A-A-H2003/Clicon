@@ -6,7 +6,7 @@ interface Props {
 }
 
 const CountCartProvider =({ children }: Props)=>{
-    const [countCart,setCountCart]=useState(0)
+    const [countCart,setCountCart]=useState<number>(0)
     return<CountCartContext.Provider value={{countCart,setCountCart}}>
        {children}
     </CountCartContext.Provider>

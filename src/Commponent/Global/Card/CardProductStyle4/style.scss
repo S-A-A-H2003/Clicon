@@ -1,0 +1,54 @@
+.CardProductStyle4{
+    position: relative;
+    padding: 16px;
+
+    .CardProductStyle4_Img{
+        width: 202px;
+        height: 172px;
+        margin-bottom: 8px;
+    }
+
+    .Price{
+        display: flex;
+        align-items: center;
+        margin: 8px 8px 8px 0px;
+
+        p{
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    }
+
+    .CardProductStyle4_Rating{
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+
+    .CardProductStyle4_Hover{
+        display: none;
+    }
+
+    &:hover .CardProductStyle4_Hover{
+        position: absolute;
+        top: 16px;
+        right: 16px;  
+        width: 202px;
+        height: 172px;
+        background-color: #00000020;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .CardProductStyle4_Badge{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 800;
+        
+        .CardProductStyle4_Activ{
+            margin-bottom: 2px; 
+        }
+    }
+}

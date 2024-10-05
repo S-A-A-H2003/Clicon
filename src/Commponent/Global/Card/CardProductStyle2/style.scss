@@ -1,41 +1,48 @@
-.CardStyle1{
+.CardProductStyle2{
     position: relative;
     padding: 16px;
-}
-.CardStyle1 img{
-    width: 216px;
-    height: 188px;
-    margin-bottom: 8px;
-}
-.CardStyle1 .Price{
-   display: flex;
-   align-items: center;
-   margin: 8px 8px 8px 0px;
-}
-.CardStyle1 .Price p{
-    margin-left: 4px;
-    margin-right: 4px;
- }
- .CardStyle1 .CardStyle1_Hover{
-   display: none;
-}
-.CardStyle1:hover .CardStyle1_Hover{
-    position: absolute;
-    top: 12px;
-    right: 12px;  
-    width: 216px;
-    height: 188px;
-    background-color: #00000020;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.CardStyle1_Badge{
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    z-index: 800;
-}
-.CardStyle1_Activ{
-    margin-bottom: 2px; 
+
+    .CardProductStyle2_Img{
+        width: 216px;
+        height: 188px;
+        margin-bottom: 8px;
+    }
+
+    .Price{
+        display: flex;
+        align-items: center;
+        margin: 8px 8px 8px 0px;
+
+        p{
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    }
+
+    .CardProductStyle2_Hover{
+        display: none;
+    }
+
+    &:hover .CardProductStyle2_Hover{
+        position: absolute;
+        top: 16px;
+        right: 16px;  
+        width: 216px;
+        height: 188px;
+        background-color: #00000020;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .CardProductStyle2_Badge{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 800;
+        
+        .CardProductStyle2_Activ{
+            margin-bottom: 2px; 
+        }
+    }
 }

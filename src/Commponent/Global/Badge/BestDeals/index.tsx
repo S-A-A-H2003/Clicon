@@ -9,11 +9,15 @@ import { BodyTiny600 } from '../../../../Style/Font/Typograpy'
 //Constant
 import { Color } from '../../../../Constant/Colors'
 
-export default function BestDeals() {
+interface Props {
+  className?:string;
+}
+
+export default function BestDeals({className}:Props) {
   return (
     <>
       <ButtonGlobal
-        className={'BestDeals'}
+        className={className+ ' BestDeals'}
         width={95}
         height={26}
         backgroundcolor={Color.Secondary500}

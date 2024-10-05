@@ -7,17 +7,15 @@ import Container from '../../../Commponent/Global/Container'
 import { useProductsContext } from '../../../Context/Products'
 import CardProductStyle2 from '../../../Commponent/Global/Card/CardProductStyle2'
 import CardProductStyle3 from '../../../Commponent/Global/Card/CardProductStyle3'
-import { BodySmall400, BodySmall600, H3 } from '../../../Style/Font/Typograpy'
+import { BodySmall400, H3 } from '../../../Style/Font/Typograpy'
 import { Color } from '../../../Constant/Colors'
-import ArrowRight from '../../../Asset/Image/Pages/Home/HomeSection/ArrowRight.png'
-import { useNavigate } from 'react-router-dom'
-import { PATH } from '../../../Constant/Route'
+import BRBrowseAllProduct from '../../../Commponent/Global/Button/ButtonRectangel/B_R_BrowseAllProduct'
 
 export default function HomeSection3() {
   const{Products} = useProductsContext()
   const DataCardStyle2 =Products?.filter((item:any)=>item.isBestDeals).slice(0,8)
   const DataCardStyle3 =Products?.filter((item:any)=>item.isBestDeals && (item.Rating.rate>5 || item.Rating.rate>4)).slice(1,2)
-  const navigate =useNavigate()
+  
   
   return (
     <>
@@ -29,11 +27,7 @@ export default function HomeSection3() {
                 <BodySmall400 color={Color.Gary900}>Deals ends in</BodySmall400>
               </div> 
             </div>
-
-            <div className="HomeSection1_Top_PartTow" onClick={()=>navigate(PATH.SHOP)}>
-              <BodySmall600 color={Color.Secondary500}>Browse All Product</BodySmall600>
-              <img src={ArrowRight} alt="" />
-            </div>
+            <BRBrowseAllProduct></BRBrowseAllProduct> 
           </div>
 
           <div className="HomeSection1_Bottom">

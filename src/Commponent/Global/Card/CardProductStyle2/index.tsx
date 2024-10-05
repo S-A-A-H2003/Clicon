@@ -1,5 +1,5 @@
 import './style.scss'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 //Style
 import { Color } from '../../../../Constant/Colors'
@@ -19,6 +19,7 @@ import Sale from '../../Badge/Sale'
 import SoldOut from '../../Badge/SoldOut'
 import { useCartContext } from '../../../../Context/Cart'
 import { useWishlistContext } from '../../../../Context/Wishlist'
+import { convertCurrency } from '../../../../Utils/Currency'
 
 interface Props {
   className?:string;
@@ -45,7 +46,7 @@ export default function CardProductStyle2({item}:Props) {
   const [initHover,setInitHover]=useState<boolean>(false)
   const {cart}=useCartContext()
   const {wishlist}=useWishlistContext()
-  
+
   const [initBCAddToCart,setInitBCAddToCart]=useState(false)
   const [initBCWish,setInitBCWish]=useState(false)
   const {AddToCart,RemoveFromCart}=useCart()
@@ -54,11 +55,35 @@ export default function CardProductStyle2({item}:Props) {
 
   const HandelChangeBCAddToCart =(item:any)=>{
     setInitBCAddToCart(initBCAddToCart?false:true)
-    initBCAddToCart?RemoveFromCart(item.id):AddToCart(item.id) 
+    if(initBCAddToCart){
+      if(item.isSoldOut){
+        window.alert(item.productNames +" Sold Out")
+      }else{
+        RemoveFromCart(item.id)
+      }
+    }else{
+      if(item.isSoldOut){
+        window.alert(item.productNames +" Sold Out")
+      }else{
+        AddToCart(item.id)
+      }
+    } 
   }
   const HandelChangeBCWish =(item:any)=>{
     setInitBCWish(initBCWish?false:true)
-    initBCWish?RemoveFromWishlist(item.id):AddToWishlist(item.id) 
+    if(initBCWish){
+      if(item.isSoldOut){
+        window.alert(item.productNames +" Sold Out")
+      }else{
+        RemoveFromWishlist(item.id)
+      }
+    }else{
+      if(item.isSoldOut){
+        window.alert(item.productNames +" Sold Out")
+      }else{
+        AddToWishlist(item.id)
+      }
+    }
   } 
   const HandelHoverTrue =()=>{
     setInitHover(true)
@@ -66,10 +91,11 @@ export default function CardProductStyle2({item}:Props) {
   const HandelHoverFalse =()=>{
     setInitHover(false)
   }
+  const Type:string =localStorage.getItem('Currency') || "USD"
   return (
     <>
         <Display
-          className='CardStyle1'
+          className='CardProductStyle2'
           width={248}
           height={296} 
           border={`1px solid ${Color.Gary100}`} 
@@ -77,17 +103,17 @@ export default function CardProductStyle2({item}:Props) {
           onMouseLeave={()=>HandelHoverFalse()}
         >
          {initHover?'':
-          <div className="CardStyle1_Badge">
-            {item.isSoldOut?<SoldOut className={'CardStyle1_Activ CardStyle1_SoldOut'}></SoldOut>:
+          <div className="CardProductStyle2_Badge">
+            {item.isSoldOut?<SoldOut className={'CardProductStyle2_Activ CardProductStyle2_SoldOut'}></SoldOut>:
               <>
-                {item.offer?<Discount className={'CardStyle1_Activ CardStyle1_Discount'} Discount={item.offer}></Discount>:''}
-                {item.isHot?<Hot className={'CardStyle1_Activ CardStyle1_Hot'}></Hot>:''}
-                {item.isSale?<Sale className={'CardStyle1_Activ CardStyle1_Sale'}></Sale>:''}
+                {item.offer?<Discount className={'CardProductStyle2_Activ CardProductStyle2_Discount'} Discount={item.offer}></Discount>:''}
+                {item.isHot?<Hot className={'CardProductStyle2_Activ CardProductStyle2_Hot'}></Hot>:''}
+                {item.isSale?<Sale className={'CardProductStyle2_Activ CardProductStyle2_Sale'}></Sale>:''}
               </>
             }
           </div>}
-          <img src={item.pictures.mainPicture} alt="" className='CardStyle1_Img' />
-          <div className='CardStyle1_Hover'>
+          <img src={item.pictures.mainPicture} alt="" className='CardProductStyle2_Img' />
+          <div className='CardProductStyle2_Hover'>
             <BCWish onClick={()=>HandelChangeBCWish(item)} isActive={wishlist.some((i:any)=>i.id===item.id)}></BCWish>
             <BCAddToCart onClick={()=>HandelChangeBCAddToCart(item)} isActive={cart.some((i:any)=>i.id===item.id)}></BCAddToCart>
             <BCEye onClick={()=>navigate(`/ProductDetail/${item.id}`)}></BCEye>
@@ -100,11 +126,11 @@ export default function CardProductStyle2({item}:Props) {
           <div className="Price">
             <BodySmall600 color={Color.Gary400}>
               <del>
-                ${item.priceBefor}
+              {localStorage.getItem('Currency')} {convertCurrency(item.priceBefor,Type)}
               </del>
             </BodySmall600>
             <BodySmall600 color={Color.Secondary500}>
-              ${item.price}
+              {localStorage.getItem('Currency')}  {convertCurrency(item.price,Type)}
             </BodySmall600>
           </div>
         </Display>

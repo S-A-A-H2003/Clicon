@@ -6,10 +6,11 @@ import { BodySmall400, BodySmall600 } from '../../../../Style/Font/Typograpy'
 
 //Component
 import Container from '../../Container'
+import { convertCurrency } from '../../../../Utils/Currency';
 
 interface Props {
   className?:string;
-  onClick?:React.MouseEventHandler<HTMLButtonElement>;
+  onClick?:React.MouseEventHandler<HTMLDivElement>;
   item:{
     productNames:string;
     price:number;
@@ -19,6 +20,7 @@ interface Props {
     }
   };
 }
+const Type:string =localStorage.getItem('Currency') || "USD"
 
 export default function CardProductStyle1({className,item,onClick}:Props) {
   return (
@@ -38,12 +40,12 @@ export default function CardProductStyle1({className,item,onClick}:Props) {
 
           <div className="Price">
             <BodySmall600 color={Color.Secondary500}>
-              ${item.price}
+            {localStorage.getItem('Currency')}  {convertCurrency(item.price,Type)}
             </BodySmall600>
 
             <BodySmall600 color={Color.Gary400}>
               <del>
-                ${item.priceBefor}
+              {localStorage.getItem('Currency')}  {convertCurrency(item.priceBefor,Type)}
               </del>
             </BodySmall600>
           </div>

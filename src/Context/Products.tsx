@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 import { useGet } from "../Hook/Api/Get";
+import { useTranslation } from "react-i18next";
 
 export const ProductsContext =createContext<any>(null)
 
@@ -8,7 +9,9 @@ interface Props {
 }
 
 const ProductsProvider =({ children }: Props)=>{
-    const {data:Products}=useGet('https://Clicon.com/Products')
+    const {i18n}=useTranslation()
+    const Api = i18n.language==='ar'?import.meta.env.VITE_API_GET_PRODUCTS_AR:import.meta.env.VITE_API_GET_PRODUCTS
+    const {data:Products}=useGet(Api)
     return<ProductsContext.Provider  value={{Products}}>
        {children}
     </ProductsContext.Provider>
