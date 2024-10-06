@@ -4,27 +4,86 @@
     align-items: center;
 }
 
-
 .SopeSection1{
-  @include Center(space-evenly);
+    display: flex;
+    justify-content: space-evenly;
 
     .SopeSection1_Aside{
-        .SopeSection1_Aside_Part1_Category{
-            display: flex;
-            align-items: center;
+        margin: {
+            top: 40px;
+        }
+        .SopeSection1_Aside_Part1{
             margin: {
-                bottom: 5px;
+                bottom: 24px;
             }
-            
+            p{
+                margin: {
+                    bottom: 16px;
+                }
+            }
             div{
                 margin: {
-                    left: 4px;
-                    right: 4px;
+                    bottom: 12px;
                 }
             }
         }
+
+        .SopeSection1_Aside_Part2{
+            margin: {
+                bottom: 24px;
+            }
+            p{
+                margin: {
+                    bottom: 16px;
+                }
+            }
+            div{
+                margin: {
+                    bottom: 12px;
+                }
+            }
+        }
+
+        .SopeSection1_Aside_Part3{
+            margin: {
+                bottom: 24px;
+            }
+            p{
+                margin: {
+                    bottom: 16px;
+                }
+            }
+            div{
+                margin: {
+                    bottom: 12px;
+                }
+            }
+        }
+
+        .SopeSection1_Aside_Part4{
+            margin: {
+                bottom: 24px;
+            }
+            p{
+                margin: {
+                    bottom: 16px;
+                }
+            }
+            div{
+                margin: {
+                    bottom: 12px;
+                }
+            }
+        }
+
+
     }
-    
+    .SopeSection1_Content{
+        margin: {
+            top: 40px;
+            bottom: 72px;
+        }
+    }
     .SopeSection1_Content_Part2{
         background-color: #F2F4F5;
         height: 44px;
@@ -47,7 +106,7 @@
                     right: 16px;
                     left: 16px;
                 }
-
+                
                 p img{
                     margin: {
                         right: 5px;
@@ -64,7 +123,7 @@
                 left: 24px;
             }
             @include Center(space-evenly);
-
+            
             p{
                 margin: {
                     right: 3px;
@@ -74,6 +133,16 @@
         }
     }
 
+    .SopeSection1_Break{
+        width: 312px;
+        height: 1px;
+        background-color: #C9CFD2;
+        margin: {
+            top: 24px;
+            bottom: 24px;
+        }
+    }
+    
     .SopeSection1_Content_Part3{
         display: grid;
         grid-template-columns: auto auto auto auto;
@@ -81,7 +150,7 @@
     }
     .SopeSection1_Content_Part4{
         @include Center(center);
-
+        
         .SopeSection1_Content_Part4_Button{
             @include Center(center);
     
@@ -90,4 +159,5 @@
             }
         }
     }
+
 }
