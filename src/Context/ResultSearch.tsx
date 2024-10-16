@@ -1,18 +1,18 @@
 import { createContext, useContext, useState } from "react";
-export const ResultContext =createContext<any>(null)
+export const ResultSearchContext =createContext<any>(null)
 
 interface Props {
     children: React.ReactNode;
 }
 
-const ResultProvider =({ children }: Props)=>{
+const ResultSearchProvider =({ children }: Props)=>{
     const [resultSearch, setResultSearch] = useState<[]>();
-    return <ResultContext.Provider value={{resultSearch, setResultSearch}}>
+    return <ResultSearchContext.Provider value={{resultSearch, setResultSearch}}>
         {children}
-    </ResultContext.Provider>
+    </ResultSearchContext.Provider>
 }
-export default ResultProvider;
+export default ResultSearchProvider;
 
-export const useResultContext =()=>{
-    return useContext(ResultContext)
+export const useResultSearchContext =()=>{
+    return useContext(ResultSearchContext)
 }

@@ -15,7 +15,7 @@ import Header from './Commponent/Headers/Header';
 import ResultSearch from './Commponent/Headers/ResultSearch';
 
 //Context
-import { useResultContext } from './Context/ResultSearch';
+import { useResultSearchContext } from './Context/ResultSearch';
 
 //Style
 import { GlobalStyle } from './Style/GlobalStyle/Style';
@@ -24,12 +24,11 @@ import { GlobalStyle } from './Style/GlobalStyle/Style';
 import { useTranslation } from 'react-i18next';
 import { usePost } from './Hook/Api/Post';
 import { useCartContext } from './Context/Cart';
-import BCAddToCart from './Commponent/Global/Button/ButtonCircle/B_C_AddToCart';
 
 function App() {
   const {i18n}=useTranslation()
   const Router = useRoutes(Routers)
-  const {resultSearch}=useResultContext()
+  const {resultSearch}=useResultSearchContext()
   
   //Global Post
   const {cart}=useCartContext()

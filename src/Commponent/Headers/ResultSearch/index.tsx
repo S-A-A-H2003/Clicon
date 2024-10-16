@@ -5,13 +5,13 @@ import Container from '../../Global/Container'
 import CardProductStyle1 from '../../Global/Card/CardProductStyle1'
 
 //Context
-import { useResultContext } from '../../../Context/ResultSearch'
+import { useResultSearchContext } from '../../../Context/ResultSearch'
 
 //Asset
 import Clear from '../../../Asset/Image/Component/ResultSearch/X.png'
 
 export default function ResultSearch() {
-  const {resultSearch,setResultSearch}=useResultContext()
+  const {resultSearch,setResultSearch}=useResultSearchContext()
   return (
     <>
      <Container  width={1200} className={'ResultSearch'}>

@@ -15,9 +15,10 @@ import CartProvider from './Context/Cart';
 import WishlistProvider from './Context/Wishlist';
 import CountCartProvider from './Context/CountCart';
 import CountWishlistProvider from './Context/CountWishlist';
-import ResultProvider from './Context/ResultSearch';
+import ResultSearchProvider from './Context/ResultSearch';
 import CategoryProvider from './Context/Category';
 import CardTotalsProvider from './Context/CardTotals';
+import ResultSearchSopeProvider from './Context/ResultSearchSope';
 
 //Start MSW
 await worker.start()
@@ -32,9 +33,11 @@ createRoot(document.getElementById('root')!).render(
               <CountWishlistProvider>
                 <CategoryProvider>
                   <CardTotalsProvider>
-                    <ResultProvider>
+                    <ResultSearchProvider>
+                    <ResultSearchSopeProvider>
                       <App/>
-                    </ResultProvider>
+                    </ResultSearchSopeProvider>
+                    </ResultSearchProvider>
                   </CardTotalsProvider>
                 </CategoryProvider>
               </CountWishlistProvider>

@@ -1,6 +1,9 @@
 .Search{
     position: relative;
- }
+}
+.Search_Form{
+   position: relative;
+}
 .Search_Input{
    width: 446px;
    height: 48px;
@@ -21,6 +24,22 @@
     transform: scale(1.2);
  }
 
+ .Search_KeyWord{
+   position: absolute;
+   width: 446px;
+   height: 446px;
+   background-color: #FFFFFF;
+   z-index: 999;
+   overflow-x: scroll;
+   scrollbar-width: none;
+   border-bottom: 2px solid #929FA5;
+   
+   p{
+      padding: 10px;
+      border-bottom: 2px solid #929FA5;
+   }
+
+ }
  @media screen and (max-width:810px){
     .Search_Input{
         transition: 0.5s;

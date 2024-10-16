@@ -41,7 +41,7 @@ export default function CardCart({item}:Props) {
   const [isHover, setIsHover] = useState<boolean>(false);
   
   //Global
-  const {subTotal,setSubTotal,setTotal,discount,setDiscount,shipping,setShipping,tax,setTax,couponCode} = useCardTotals()
+  const {subTotal,setSubTotal,setTotal,discount,setDiscount,shipping,setShipping,tax,setTax} = useCardTotals()
   
   const Incriment=()=>{
     setQuantity((quantity)=>quantity+1)

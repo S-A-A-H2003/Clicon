@@ -12,10 +12,11 @@ interface Props{
   onClick?:()=>void;
   color?:string;
   children?:React.ReactNode;
+  title?:React.ReactElement;
   Check?:boolean;
 }
 
-export default function ButtonFilter({width,height,border,borderradius,onClick,color,children,backgroundcolor,Check}:Props) {
+export default function ButtonFilter({width,height,border,borderradius,onClick,color,children,backgroundcolor,title,Check}:Props) {
   return (
      <div className='ButtonFilter'>
         <Display 
@@ -25,7 +26,7 @@ export default function ButtonFilter({width,height,border,borderradius,onClick,c
           borderradius={borderradius} 
           backgroundcolor={backgroundcolor}
           onClick={onClick} 
-        >{Check?<img src={CheckBox} alt="" />:''}</Display>
+        >{Check?<img src={CheckBox} alt="" />:''} {title}</Display>
         <BodySmall400 color={color}> {children}</BodySmall400>
       </div>
   )

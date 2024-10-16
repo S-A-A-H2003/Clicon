@@ -42,7 +42,7 @@ export default function CardTotals() {
 
               <Display className={'CardTotals_Total'}>
                 <BodySmall400 color={Color.Gary900}>Total</BodySmall400>
-                <BodySmall500 color={Color.Gary900}>{total}</BodySmall500>
+                <BodySmall500 color={Color.Gary900}>{total.toFixed(0)}</BodySmall500>
               </Display>
       </Display>
     </>

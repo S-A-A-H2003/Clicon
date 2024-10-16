@@ -1,5 +1,5 @@
 import './style.scss'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 //Style
 import { Color } from '../../../../Constant/Colors'

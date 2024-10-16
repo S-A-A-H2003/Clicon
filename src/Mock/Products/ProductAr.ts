@@ -40,7 +40,7 @@ interface Products {
       subPicture6: string,
     },
     Rating:{
-      rate: number,
+      rate: any,
       userFeedBack: number,
       userFeedBackStart1: number,
       userFeedBackStart2: number,

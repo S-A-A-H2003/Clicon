@@ -150,7 +150,7 @@ for (let i = 1; i <= 500; i++) {
       subPicture6: productImages[(randomProductIndex + 7) % productImages.length],
     },
     Rating: {
-      rate: (Math.random() * 5).toFixed(1), // Random rating between 0.0 and 5.0
+      rate:  parseFloat((Math.random() * 5).toFixed(1)), // Random rating between 0.0 and 5.0
       userFeedBack: Math.floor(Math.random() * 10000),
       userFeedBackStart1: Math.floor(Math.random() * 100),
       userFeedBackStart2: Math.floor(Math.random() * 100),

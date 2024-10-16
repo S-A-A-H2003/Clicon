@@ -9,6 +9,7 @@ interface Props {
   height?: number;
   color?: string;
   backgroundcolor?: string;
+  padding?:number;
   border?: string;
   borderradius?: string;
   type?: "button" | "submit" | "reset" | undefined;
@@ -18,7 +19,7 @@ interface Props {
   onClick?:()=>void;
 }
 
-export default function Display({className,width,height,color,backgroundcolor,border,borderradius,children,onMouseEnter,onMouseLeave,onClick}:Props) {
+export default function Display({className,width,height,color,backgroundcolor,border,borderradius,padding,children,onMouseEnter,onMouseLeave,onClick}:Props) {
   return (
     <>
       <DisplayStyle
@@ -27,6 +28,7 @@ export default function Display({className,width,height,color,backgroundcolor,bo
        height={height}
        color={color}
        backgroundcolor={backgroundcolor}
+       padding={padding}
        border={border}
        borderradius={borderradius}
        onMouseEnter={onMouseEnter}
