@@ -140,7 +140,7 @@ for (let i = 1; i <= 500; i++) {
 
   // Generate a more descriptive SKU based on the product category and index
   const brand = productNames[randomProductIndex].split(' ')[0]; // Extract brand from product name
-  const category = items[randomItemsIndex];
+  const category = ['Computer & Laptop', 'Computer Accessories', 'SmartPhone', 'Headphone', 'Mobile Accessories','Gaming Console', 'Camera & Photo', 'TV & Homes Appliances', 'Watchs & Accessories', 'GPS & Navigation', 'Warable Technology'][Math.floor(Math.random() * 11)];
   const sku = `${brand.slice(0, 3).toUpperCase()}-${category.slice(0, 3).toUpperCase()}-${i}`;
   Products.push({
     id: i,

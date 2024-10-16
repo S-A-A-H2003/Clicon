@@ -140,7 +140,7 @@ for (let i = 1; i <= 500; i++) {
 
   // توليد SKU بشكل أكثر وصفية بناءً على فئة المنتج والفهرس
   const brand = productNames[randomProductIndex].split(' ')[0]; // استخراج العلامة التجارية من اسم المنتج
-  const category = items[randomItemsIndex];
+  const category = ['كمبيوتر و لابتوب', 'ملحقات الكمبيوتر', 'هاتف ذكي', 'سماعة', 'ملحقات الهاتف', 'جهاز ألعاب', 'كاميرا وصور', 'تلفاز وأجهزة منزلية', 'ساعات وإكسسوارات', 'نظام تحديد المواقع والملاحة', 'التقنية القابلة للارتداء'][Math.floor(Math.random() * 11)];
   const sku = `${brand.slice(0, 3).toUpperCase()}-${category.slice(0, 3).toUpperCase()}-${i}`;
   ProductAr.push({
     id: i,
