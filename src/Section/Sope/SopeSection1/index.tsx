@@ -12,6 +12,7 @@ import { useCategoryContext } from '../../../Context/Category'
 import ButtonFilter from '../../../Commponent/Global/Button/ButtonFilter'
 import Search from '../../../Commponent/Headers/Search'
 import { useResultSearchSopeContext } from '../../../Context/ResultSearchSope'
+import OfferInShop from '../../../Commponent/Global/Offers/OfferInShop'
 export default function SopeSection1() {
 
   const {Products} = useProductsContext()
@@ -237,6 +238,7 @@ export default function SopeSection1() {
               </div>
             </div>
             <div className="SopeSection1_Aside_Part5">
+              <OfferInShop></OfferInShop>
             </div>
           </aside>
 

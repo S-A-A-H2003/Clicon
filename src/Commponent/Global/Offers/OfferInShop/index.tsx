@@ -8,8 +8,7 @@ import Display from '../../Display'
 import { BodyLarge600 } from '../../../../Style/Font/Typograpy';
 
 
-
-export default function CardProductStyle5() {
+export default function OfferInShop() {
   return (
     <>
         <Display
