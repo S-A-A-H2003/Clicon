@@ -23,15 +23,15 @@ export default function HomeSection5() {
 
   const [valueFilter,setValueFilter]  = useState<string>()
   const DataCardStyle4 =Products?.filter((item:any)=>valueFilter?item.productNames===valueFilter:item.productNames).slice(0,8)
-  const DataCardStyle5 =Products?.filter((item:any)=>valueFilter?item.productNames===valueFilter:item.productNames).slice(8,9)
+  //const DataCardStyle5 =Products?.filter((item:any)=>valueFilter?item.productNames===valueFilter:item.productNames).slice(8,9)
   return (
     <> 
         <Container className={'HomeSection5'}>
           <div className="HomeSection5_Left">
             <div className="HomeSection5_Bottom_PartOne">
-              {Array.isArray(DataCardStyle5)&&DataCardStyle5?.map((item)=>
-                <CardProductStyle5 item={item}></CardProductStyle5>
-              )}
+
+                <CardProductStyle5 ></CardProductStyle5>
+              
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export default function HomeSection5() {
             </div> 
             
             <div className="HomeSection5_Right_Bottom">
-              {Array.isArray(DataCardStyle4)&&DataCardStyle4?.map((item)=> 
+              {Array.isArray(DataCardStyle4)&&DataCardStyle4?.map((item)=>
                <CardProductStyle4 item={item}></CardProductStyle4>
               )}
             </div> 

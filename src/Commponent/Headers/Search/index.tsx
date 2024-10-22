@@ -9,7 +9,7 @@ import { useResultSearchContext } from '../../../Context/ResultSearch'
 
 //Librari
 import { useTranslation } from 'react-i18next'
-import { useResultSearchSopeContext } from '../../../Context/ResultSearchSope.tsx'
+import { useResultSearchSopeContext } from '../../../Context/ResultSearchSope'
 import { useState } from 'react'
 // import { BodySmall400 } from '../../../Style/Font/Typograpy'
 // import { Color } from '../../../Constant/Colors'
