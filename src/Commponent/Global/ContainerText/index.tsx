@@ -8,15 +8,17 @@ interface Props {
   color?:string;
   backgroundcolor?:string;
   children?:React.ReactNode;
+  onClick?:()=>void;
 }
 
-export default function ContainerText({className,color,backgroundcolor,children}:Props) {
+export default function ContainerText({className,color,backgroundcolor,children,onClick}:Props) {
   return (
     <>
       <ContainerTextStyle
         className={'ContainarText ' + className}
         backgroundcolor={backgroundcolor}
         color={color}
+        onClick={onClick}
       >
        {children}
       </ContainerTextStyle>
