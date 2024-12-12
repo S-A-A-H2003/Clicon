@@ -1,8 +1,5 @@
 import './style.scss'
 
-//Component
-import ButtonGlobal from '../../ButtonGlobal'
-
 //Style
 import { BodySmall600 } from '../../../../../Style/Font/Typograpy'
 

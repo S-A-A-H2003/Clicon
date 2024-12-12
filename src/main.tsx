@@ -21,7 +21,10 @@ import CardTotalsProvider from './Context/CardTotals';
 import ResultSearchSopeProvider from './Context/ResultSearchSope';
 
 //Start MSW
-await worker.start()
+async function startWorker() {
+  await worker.start();
+}
+startWorker();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
